@@ -4,29 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇪 EE 01 - xiaohe
+- name: 🇧🇪 BE 01 - xiaohe
   type: vless
-  server: f0d7aft.nl17.h1clayd.click
+  server: 172.67.209.13
   port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  uuid: fa45096d-bed0-ad80-c773-23c30000001b
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: kkCGiCQCKnkozJR1KKCRNtmdBECmThCgI9VSv7iDcWI
-  servername: f0d7aft.nl17.h1clayd.click
-  client-fingerprint: firefox
+  servername: xo3ubk-c97eql-n2d4a9.shoameni17.workers.dev
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: xo3ubk-c97eql-n2d4a9.shoameni17.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇪🇪 EE 01 - xiaohe
+  - 🇧🇪 BE 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇪 EE 01 - xiaohe
+  - 🇧🇪 BE 01 - xiaohe
 rules:
 - MATCH,PROXIES
